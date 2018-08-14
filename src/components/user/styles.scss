@@ -1,0 +1,92 @@
+.user-box {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  min-width: 200px;
+  padding: 20px;
+  margin: 25px 0;
+  align-items: center;
+  span {
+    text-align: center;
+  }
+  .wrapper {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    &:hover {
+      .avatar-bg {
+        background: rgba(72, 195, 220, 0.85);
+      }
+      img {
+        object-fit: cover;
+        transform: scale(1.2);
+      }
+    }
+  }
+  .mail {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #452f77;
+    z-index: 2;
+    top: 5px;
+    right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    &:hover {
+      background: #6c48bd;
+    }
+    span {
+      background: url('../../assets/images/mail.svg') no-repeat;
+      width: 17px;
+      height: 12px;
+      color: white;
+      display: block;
+    }
+  }
+  .avatar {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 50%;
+    .avatar-bg {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background: rgba(72, 195, 220, 0.75);
+      transition: all 0.5s;
+      &:hover {
+        background: rgba(72, 195, 220, 0.65);
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      filter: grayscale(100%) contrast(150%);
+      transition: all 0.5s;
+    }
+  }
+  .name {
+    font-size: 16px;
+    color: #452e76;
+    padding: 15px 0;
+    font-weight: 500;
+  }
+  .role {
+    font-size: 14px;
+    color: #48c3dc;
+    margin: 0 0 5px 0;
+    font-weight: 400;
+  }
+  .location {
+    font-size: 14px;
+    color: #808080;
+    font-weight: 400;
+  }
+}
