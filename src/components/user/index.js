@@ -10,7 +10,7 @@ class User extends Component {
           <a href={`mailto:${this.props.user.mail}`} className="mail">
             <span></span>
           </a>
-          <div className="avatar">
+          <div className="avatar" onClick={() => this.props.selectUser(this.props.user.id)}>
             <div className="avatar-bg"></div>
             {
               this.props.user.image && <img src={this.props.user.image} alt="avatar" />
